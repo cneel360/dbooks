@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
     <head>
       <title> Dawsome Books</title>
@@ -9,29 +9,6 @@
         <header>
             <h1>Dawsome Books</h1>
         </header>
-        <div id ="selectordiv" >
-          <button onclick="selector()">Select books</button>
-        </div>
-      <div id="content"></div>
-      <script>
-        function handleResponse(response) {
-  var content = document.getElementById("content");
-  content.innerHTML = ""; // Clear previous results
-
-  for (var i = 0; i < response.items.length; i++) {
-    var item = response.items[i];
-    var escapedTitle = escapeHtml(item.volumeInfo.title); // Escape title
-    content.innerHTML += "<br>" + escapedTitle + " | by: " + item.volumeInfo.authors;
-  }
-}
-
-function escapeHtml(str) {
-  var div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
-      
-      </script>
-      <script src="https://www.googleapis.com/books/v1/volumes?q=${searchterm}&callback=handleResponse"></script>
+      <a href="index.html">books </a>
     </body>
   </html>
